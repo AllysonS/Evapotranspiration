@@ -55,7 +55,7 @@ ReadInputs <- function (climatedata, constants, stopmissing, timestep,
     dateagg <- as.Date(Date.daily)
     
     # find missing dates
-    StdDate.daily <- as.Date(seq.Date(Date.daily[1],Date.daily[length(Date.daily)],by="day"))
+    StdDate.daily <- as.Date(seq.Date(as.Date(Date.daily[1]),as.Date(Date.daily[length(Date.daily)]),by="day"))
     Missing_DateIndex.daily <- as.Date(setdiff(StdDate.daily,Date.daily))
     
     #StdDate.monthly <- unique(as.yearmon(seq.Date(Date.daily[1],Date.daily[length(Date.daily)],by="day")))
